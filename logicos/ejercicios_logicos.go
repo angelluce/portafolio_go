@@ -1,10 +1,10 @@
-package main
+package logicos
 
 import "fmt"
 
 // Crear un aplicativo que pueda adivinar si es Vocal o No. Para eso una letra tiene que ser ingresada por teclado
-func veficarVocal() {
-	fmt.Println("Ejercicio\nAdivinar si es una vocal o no")
+func VeficarVocal() {
+	fmt.Println("8. Verificar vocal")
 	var letra string
 	fmt.Println("Ingrese una letra: ")
 	fmt.Scan(&letra)
@@ -20,8 +20,8 @@ func veficarVocal() {
 
 // Solicita un número e imprime todos los números pares e impares desde 1 hasta ese número con el mensaje "es par"
 // o "es impar" si el número es 5 el resultado será: 1 - es impar 2 - es par 3 - es impar 4 - es par 5 - es impar
-func numerosParesImpares() {
-	fmt.Println("Ejercicio\nImprimir los números pares e impares del 1 a n")
+func NumerosParesImpares() {
+	fmt.Println("9. Números pares e impares")
 	var n int
 	fmt.Println("Ingrese un número: ")
 	fmt.Scan(&n)
@@ -36,8 +36,8 @@ func numerosParesImpares() {
 
 // Escriba un programa que pida un número entero mayor que cero y calcule su factorial. La factorial es el resultado de
 // multiplicar ese número por sus anteriores hasta la unidad
-func factorial() {
-	fmt.Println("Ejercicio\nCalcular el factorial de un número")
+func Factorial() {
+	fmt.Println("10. Factorial")
 	var n, resultado int
 	fmt.Println("Ingrese un número: ")
 	fmt.Scan(&n)
@@ -51,8 +51,8 @@ func factorial() {
 
 // Escribe un programa que permita ir introduciendo una serie indeterminada de números mientras su suma no supere 50.
 // Cuando esto ocurra, se debe mostrar el total acumulado y el contador de cuantos números se han introducido
-func sumaHasta50() {
-	fmt.Println("Ejercicio\nSumar números hasta llegar a 50")
+func SumaHasta50() {
+	fmt.Println("11. Sumar números hasta llegar a 50")
 	var n, suma, contador int
 	suma = 0
 	contador = 0
@@ -69,42 +69,40 @@ func sumaHasta50() {
 // Escribir un programa con un bucle infinito con opciones para elegir, que pueda calcular el área de 2 figuras geométricas,
 // triángulo y rectángulo. En primer lugar, pregunta de qué figura se quiere calcular el área, después solicita los datos que
 // necesites para calcularlo. 1) triángulo = b * h/2 2) rectángulo = b * h 3) Salir: Solo cuando escojas esta opción el bucle se detendrá
-func calcularArea() {
+func CalcularArea() {
+	fmt.Println("12. Calcular área")
 	var option int
 
-	for {
-		fmt.Println("Ejercicio\nCalcular el área de un triángulo o un rectángulo")
-		fmt.Println("1) Triángulo")
-		fmt.Println("2) Rectángulo")
-		fmt.Println("3) Salir")
-		fmt.Println("Ingrese una opción: ")
-		fmt.Scan(&option)
+	fmt.Println("Ejercicio\nCalcular el área de un triángulo o un rectángulo")
+	fmt.Println("1) Triángulo")
+	fmt.Println("2) Rectángulo")
+	fmt.Println("3) Salir")
+	fmt.Println("Ingrese una opción: ")
+	fmt.Scan(&option)
 
-		switch option {
-		case 1:
-			var base, altura float64
-			fmt.Println("Ingrese la base: ")
-			fmt.Scan(&base)
-			fmt.Println("Ingrese la altura: ")
-			fmt.Scan(&altura)
-			area := base * altura / 2
-			fmt.Println("El área del triángulo es", area)
+	switch option {
+	case 1:
+		var base, altura float64
+		fmt.Println("Ingrese la base: ")
+		fmt.Scan(&base)
+		fmt.Println("Ingrese la altura: ")
+		fmt.Scan(&altura)
+		area := base * altura / 2
+		fmt.Println("El área del triángulo es", area)
 
-		case 2:
-			var base, altura float64
-			fmt.Println("Ingrese la base: ")
-			fmt.Scan(&base)
-			fmt.Println("Ingrese la altura: ")
-			fmt.Scan(&altura)
-			area := base * altura
-			fmt.Println("El área del rectángulo es", area)
+	case 2:
+		var base, altura float64
+		fmt.Println("Ingrese la base: ")
+		fmt.Scan(&base)
+		fmt.Println("Ingrese la altura: ")
+		fmt.Scan(&altura)
+		area := base * altura
+		fmt.Println("El área del rectángulo es", area)
 
-		case 3:
-			fmt.Println("Saliendo...")
-			break
+	case 3:
+		fmt.Println("Saliendo...")
 
-		default:
-			fmt.Println("Opción inválida")
-		}
+	default:
+		fmt.Println("Opción inválida")
 	}
 }
