@@ -2,7 +2,41 @@ package operadores
 
 import "fmt"
 
-func Ejercicio_aritmeticos() {
+func Menu_ejercicios() {
+	var opcion int
+	fmt.Println("** Submenú: Ejercicios con operadores **")
+	fmt.Println("1. Operadores aritméticos")
+	fmt.Println("2. Operadores relacionales")
+	fmt.Println("3. Operadores de asignación")
+	fmt.Println("4. Operadores lógicos")
+	fmt.Println("5. Condicionales")
+	fmt.Println("6. Switch")
+	fmt.Println("7. For")
+
+	fmt.Println("Ingrese el número del ejercicio:")
+	fmt.Scan(&opcion)
+
+	switch opcion {
+	case 1:
+		ejercicio_aritmeticos()
+	case 2:
+		ejercicio_relacionales()
+	case 3:
+		ejercicio_asignacion()
+	case 4:
+		ejercicio_logicos()
+	case 5:
+		ejercicio_condicionales()
+	case 6:
+		ejercicio_switch()
+	case 7:
+		ejercicio_for()
+	default:
+		fmt.Println("Opción no válida")
+	}
+}
+
+func ejercicio_aritmeticos() {
 	fmt.Println("1. Operadores aritméticos")
 	var a, b, resultado int
 
@@ -26,7 +60,7 @@ func Ejercicio_aritmeticos() {
 	println("a % b =", resultado)
 }
 
-func Ejercicio_relacionales() {
+func ejercicio_relacionales() {
 	fmt.Println("2. Operadores relacionales")
 	var a, b int
 
@@ -46,7 +80,7 @@ func Ejercicio_relacionales() {
 	println("a <= b", a <= b)
 }
 
-func Ejercicio_asignacion() {
+func ejercicio_asignacion() {
 	fmt.Println("3. Operadores de asignación")
 	var a, b, resultado int
 
@@ -72,7 +106,7 @@ func Ejercicio_asignacion() {
 	println("a %= b", resultado)
 }
 
-func Ejercicio_condicionales() {
+func ejercicio_condicionales() {
 	fmt.Println("5. Condicionales")
 	var a, b int
 
@@ -95,7 +129,7 @@ func Ejercicio_condicionales() {
 	}
 }
 
-func Ejercicio_logicos() {
+func ejercicio_logicos() {
 	fmt.Println("4. Operadores lógicos")
 	var a, b int
 
@@ -118,7 +152,7 @@ func Ejercicio_logicos() {
 	}
 }
 
-func Ejercicio_switch() {
+func ejercicio_switch() {
 	fmt.Println("6. Switch")
 	var a int
 
@@ -143,7 +177,7 @@ func Ejercicio_switch() {
 	}
 }
 
-func Ejercicio_for() {
+func ejercicio_for() {
 	fmt.Println("7. For")
 
 	var n int
