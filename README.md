@@ -6,7 +6,7 @@ También se ha implementado modularidad dentro del proyecto y se ha construido u
 
 ## Vista previa
 
-El proyecto de línea de comandos, al ejecutarse luce de la siguiente manera
+El proyecto es por línea de comandos (CLI), al ejecutarse luce de la siguiente manera
 
 ![Go](imgs/go_run.png)
 
